@@ -1,7 +1,7 @@
 # Airbnb-Data-Analysis
 This project performs an in-depth analysis of an Airbnb dataset to understand various aspects of the listings, including pricing, location, room types, and review trends.
 
-##Project Goals
+## Project Goals
 The primary objectives of this project are to:
 
 Clean and preprocess the raw Airbnb dataset.
@@ -10,7 +10,7 @@ Visualize the geographical distribution of listings across different neighbourho
 Investigate the relationship between price and room type.
 Analyze the trend of reviews over time.
 
-##Methodology
+## Methodology
 The analysis follows a standard data analysis workflow:
 
 Data Loading: The dataset is loaded using pandas.
@@ -18,7 +18,7 @@ Data Cleaning: Missing values in 'reviews per month', 'last review', 'NAME', and
 Descriptive Statistics: Summary statistics are generated to understand the central tendencies and spread of numerical data.
 Visualization: Various plots are created using Matplotlib and Seaborn to visually represent the data and findings.
 
-##Key Findings
+## Key Findings
 The analysis provides insights into:
 
 The overall distribution of listing prices.
@@ -27,11 +27,11 @@ The concentration of Airbnb listings in specific neighbourhood groups.
 How pricing varies across different room types.
 The pattern and volume of reviews over time.
 
-##Repository Contents
+## Repository Contents
 Jupyter Notebook containing the complete analysis code.
 airbnb_data.csv: The dataset used for the analysis.
 
-##How to Run
+## How to Run
 Clone this repository to your local machine.
 Make sure you have Python installed along with the necessary libraries (pandas, numpy, matplotlib, seaborn). You can install them via pip:
 pip install pandas numpy matplotlib seaborn
