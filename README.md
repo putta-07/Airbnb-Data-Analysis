@@ -16,7 +16,7 @@ This project is a Power BI dashboard built to analyze Airbnb listings data. It p
 ## Dashboard Pages
 The dashboard is organized into multiple pages:
 
-1. Market Overview
+### 1. Market Overview
 
   • Listings by neighbourhood group
 
@@ -24,7 +24,7 @@ The dashboard is organized into multiple pages:
 
   • Instant bookability distribution
 
-2. Pricing & Revenue
+### 2. Pricing & Revenue
 
   • Price distribution histogram
 
@@ -34,7 +34,7 @@ The dashboard is organized into multiple pages:
 
   • Revenue potential by neighbourhood
 
-3. Guest Reviews & Engagement
+### 3. Guest Reviews & Engagement
 
   • Review trends over time
 
@@ -44,7 +44,7 @@ The dashboard is organized into multiple pages:
 
   • Instant bookability vs. review rate
 
-4. Geographic Insights
+### 4. Geographic Insights
 
   • Listings by neighbourhood group
 
@@ -54,7 +54,7 @@ The dashboard is organized into multiple pages:
 
   • Review density heatmap
 
-5. Host Performance & Identity
+### 5. Host Performance & Identity
 
   • Top hosts by number of listings
 
