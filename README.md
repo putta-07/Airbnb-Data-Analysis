@@ -1,41 +1,119 @@
-# Airbnb-Data-Analysis
-This project performs an in-depth analysis of an Airbnb dataset to understand various aspects of the listings, including pricing, location, room types, and review trends.
+# Airbnb Data Analysis Dashboard
+## Project Overview
+This project is a Power BI dashboard built to analyze Airbnb listings data. It provides insights into pricing, revenue potential, guest engagement, geographic distribution, and host performance. The dataset contains over 1 million rows of Airbnb listings with attributes such as host details, room type, price, service fee, reviews, availability, and location.
 
-## Project Goals
-The primary objectives of this project are to:
+## Objectives
+• Explore Airbnb market trends across neighbourhoods and room types.
 
-Clean and preprocess the raw Airbnb dataset.
-Explore the distributions of key variables like price and room type.
-Visualize the geographical distribution of listings across different neighbourhood groups.
-Investigate the relationship between price and room type.
-Analyze the trend of reviews over time.
+• Analyze pricing structures and revenue potential.
 
-## Methodology
-The analysis follows a standard data analysis workflow:
+• Understand guest behavior through reviews and booking policies.
 
-Data Loading: The dataset is loaded using pandas.
-Data Cleaning: Missing values in 'reviews per month', 'last review', 'NAME', and 'host name' are addressed. The 'house_rules' and 'license' columns are dropped. Price and service fee columns are cleaned and converted to numeric types. Duplicate rows are removed.
-Descriptive Statistics: Summary statistics are generated to understand the central tendencies and spread of numerical data.
-Visualization: Various plots are created using Matplotlib and Seaborn to visually represent the data and findings.
+• Visualize geographic distribution of listings.
 
-## Key Findings
-The analysis provides insights into:
+• Evaluate host performance and identity verification.
 
-The overall distribution of listing prices.
-The prevalence of different room types within the dataset.
-The concentration of Airbnb listings in specific neighbourhood groups.
-How pricing varies across different room types.
-The pattern and volume of reviews over time.
+## Dashboard Pages
+The dashboard is organized into multiple pages:
 
-## Repository Contents
-Jupyter Notebook containing the complete analysis code.
-airbnb_data.csv: The dataset used for the analysis.
+1. Market Overview
 
-## How to Run
-Clone this repository to your local machine.
-Make sure you have Python installed along with the necessary libraries (pandas, numpy, matplotlib, seaborn). You can install them via pip:
-pip install pandas numpy matplotlib seaborn
+  • Listings by neighbourhood group
 
-Open the Jupyter Notebook (.ipynb file) in a compatible environment (like Google Colab, Jupyter Notebook, or JupyterLab).
-Run the cells sequentially to execute the data cleaning, analysis, and visualization steps.
-This README provides a good overview of your project for potential viewers on GitHub. Remember to replace airbnb_data.csv with the actual filename of your dataset if it's different.
+  • Room availability by type
+
+  • Instant bookability distribution
+
+2. Pricing & Revenue
+
+  • Price distribution histogram
+
+  • Average price per room type
+
+  • Service fee vs. price analysis
+
+  • Revenue potential by neighbourhood
+
+3. Guest Reviews & Engagement
+
+  • Review trends over time
+
+  • Reviews per month by room type
+
+  • Cancellation policy impact
+
+  • Instant bookability vs. review rate
+
+4. Geographic Insights
+
+  • Listings by neighbourhood group
+
+  • Map of listings by latitude/longitude
+
+  • Average price by location
+
+  • Review density heatmap
+
+5. Host Performance & Identity
+
+  • Top hosts by number of listings
+
+  • Host identity verification distribution
+
+  • Average reviews per host
+
+  • Host distribution across neighbourhoods
+
+## Key Features
+• Interactive filters: Room type, neighbourhood group, instant bookability.
+
+• Custom DAX measures:
+
+    DAX
+    Revenue Potential = SUMX(airbnb_dataset, airbnb_dataset[price] * airbnb_dataset[availability_365])
+
+    Average Reviews per Host =
+    AVERAGEX(
+    VALUES(airbnb_dataset[host id]),
+    CALCULATE(AVERAGE(airbnb_dataset[number of reviews]))
+    )
+• Calculated columns for price ranges and host listing counts.
+
+• Clean formatting with consistent colors, titles, and slicers.
+
+## Dataset
+The dataset includes:
+
+• Host info: host id, host name, identity verification
+
+• Listing info: room type, price, service fee, minimum nights, availability
+
+• Location: neighbourhood, neighbourhood group, latitude, longitude
+
+• Reviews: number of reviews, last review date, reviews per month
+
+• Other attributes: cancellation policy, instant bookability, construction year
+
+## How to Use
+1. Open the .pbix file in Power BI Desktop.
+
+2. Navigate through the pages using the bottom tabs.
+
+3. Use slicers to filter by neighbourhood, room type, or booking options.
+
+4. Explore insights interactively.
+
+## Insights
+• Manhattan and Brooklyn dominate Airbnb listings.
+
+• Entire homes/apartments are the most common room type.
+
+• Pricing varies widely, with service fees scaling alongside price.
+
+• Guest reviews peaked around 2018 and vary by cancellation policy.
+
+• Verified hosts and top hosts manage a significant share of listings.
+
+## Author
+Developed by PRIYANGSU DUTTA
+Focus: Data visualization, simulation modeling, and dashboard design.
